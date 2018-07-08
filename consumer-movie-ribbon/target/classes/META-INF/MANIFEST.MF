@@ -1,0 +1,9 @@
+Manifest-Version: 1.0
+Implementation-Title: consumer-movie-ribbon
+Implementation-Version: 0.0.1-SNAPSHOT
+Implementation-Vendor-Id: liuhy
+Build-Jdk: 1.7.0_67
+Built-By: Administrator
+Created-By: Maven Integration for Eclipse
+Implementation-URL: http://maven.apache.org
+
