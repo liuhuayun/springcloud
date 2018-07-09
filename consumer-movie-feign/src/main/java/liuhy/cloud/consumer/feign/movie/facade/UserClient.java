@@ -9,7 +9,7 @@ import liuhy.cloud.provider.entity.User;
 @FeignClient("service-provider-user")
 public interface UserClient {
  
-    @RequestMapping(method = RequestMethod.GET, value = "/getuser")
+    @RequestMapping(method = RequestMethod.GET, value = "/instance-info")
     public User getuserinfo();
      
     @RequestMapping(method = RequestMethod.GET, value = "/getuser")

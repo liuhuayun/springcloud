@@ -2,7 +2,7 @@ server:
   port: 8011
 spring:
   application:
-    name: service-provider-user
+    name: consumer-movie-feign
 
 eureka:
   client:
