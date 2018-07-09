@@ -1,4 +1,4 @@
-package liuhy.cloud.consumer;
+package liuhy.cloud.consumer.ribbon.movie;
 
 public @interface ExcludeFromComponentScan {
 

@@ -1,4 +1,4 @@
-package liuhy.cloud.consumer;
+package liuhy.cloud.consumer.ribbon.movie;
 
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;

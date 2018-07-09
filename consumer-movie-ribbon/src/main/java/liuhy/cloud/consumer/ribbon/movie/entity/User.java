@@ -1,4 +1,4 @@
-package liuhy.cloud.consumer.entity;
+package liuhy.cloud.consumer.ribbon.movie.entity;
 
 import java.math.BigDecimal;
 

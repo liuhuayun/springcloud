@@ -1,4 +1,4 @@
-package liuhy.cloud.consumer.controller;
+package liuhy.cloud.consumer.ribbon.movie.controller;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.cloud.client.ServiceInstance;
@@ -8,7 +8,7 @@ import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.RestController;
 import org.springframework.web.client.RestTemplate;
 
-import liuhy.cloud.consumer.entity.User;
+import liuhy.cloud.consumer.ribbon.movie.entity.User;
 
 @RestController
 public class MovieController {
