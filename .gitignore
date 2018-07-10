@@ -5,3 +5,4 @@ classes
 .settings
 *.class
 /.project
+.springBeans

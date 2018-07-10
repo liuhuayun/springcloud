@@ -69,5 +69,6 @@
 	<module>consumer-movie-ribbon</module>
     <module>consumer-movie-feign</module>
     <module>consumer-movie-ribbon-hystrix</module>
+    <module>consumer-movie-feign-hystrix</module>
   </modules>
 </project>
