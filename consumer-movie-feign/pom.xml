@@ -34,10 +34,10 @@
 	      <groupId>org.springframework.cloud</groupId>
 	      <artifactId>spring-cloud-starter-openfeign</artifactId>
 	   </dependency>
-	   <dependency>
+	<!--    <dependency>
        		<groupId>liuhy</groupId>
         	<artifactId>service-provider-user</artifactId>
     		<version>0.0.1-SNAPSHOT</version>
-  	   </dependency>
+  	   </dependency> -->
   </dependencies>
 </project>
