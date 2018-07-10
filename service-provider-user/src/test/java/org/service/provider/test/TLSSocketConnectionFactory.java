@@ -1,4 +1,4 @@
-package org.service.provider.test;
+/*package org.service.provider.test;
 
 import java.io.ByteArrayInputStream;
 import java.io.ByteArrayOutputStream;
@@ -405,4 +405,4 @@ public class TLSSocketConnectionFactory extends SSLSocketFactory {
             } // startHandshake
         };
     }
-}
+}*/

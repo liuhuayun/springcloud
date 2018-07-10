@@ -1,4 +1,4 @@
-package org.service.provider.test;
+/*package org.service.provider.test;
 
 import javax.net.ssl.SSLContext;
 import javax.net.ssl.SSLSocket;
@@ -29,3 +29,4 @@ public class TlsTest {
 
     }  
 }
+*/

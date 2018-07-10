@@ -1,4 +1,4 @@
-package org.service.provider.test;
+/*package org.service.provider.test;
 
 import javax.net.ssl.HttpsURLConnection;
 
@@ -86,4 +86,4 @@ public class HttpsUrlConnectionForTLS {
         System.out.println(response);
         return response;
     }
-}
+}*/
