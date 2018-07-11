@@ -11,4 +11,5 @@ eureka:
       defaultZone: http://localhost:8761/eureka
   instance:
     prefer-ip-address: true
+    instance-id: ${spring.application.name}:${spring.cloud.client.ip-address}:${server.port}
 hystrix.command.default.execution.isolation.thread.timeoutInMilliseconds: 5000
