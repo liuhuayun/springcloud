@@ -15,7 +15,7 @@ import org.springframework.web.bind.annotation.RestController;
 import org.springframework.web.client.RestTemplate;
 
 import liuhy.cloud.consumer.ribbon.movie.entity.User;
-
+//ribbon客户端负载均衡，默认轮询的方式
 @RestController
 public class MovieController {
   @Autowired

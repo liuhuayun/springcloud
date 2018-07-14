@@ -4,6 +4,7 @@ import java.util.ArrayList;
 import java.util.List;
 
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.cloud.client.ServiceInstance;
 import org.springframework.cloud.client.discovery.DiscoveryClient;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PathVariable;
@@ -41,13 +42,18 @@ public class UserController {
     return instance.getHomePageUrl();
   }
 
-  @GetMapping("/instance-info")
-  public List<String> showInfo() {
+  @GetMapping("/instance-list")
+  public List<String> instanceList() {
 	  List<String> services = discoveryClient.getServices();
     //List<ServiceInstance> localServiceInstances = this.discoveryClient.getInstances(serviceId);
     return services;
   }
-
+  
+  @GetMapping("/instance-info")
+  public List<ServiceInstance>  instanceInfo() {
+	  List<ServiceInstance> instances = discoveryClient.getInstances("service-provider-user");
+    return instances;
+  }
   @PostMapping("/user")
   public User postUser(@RequestBody User user) {
     return user;
