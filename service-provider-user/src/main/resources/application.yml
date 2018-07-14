@@ -7,11 +7,16 @@ spring:
     hibernate:
       ddl-auto: update
   datasource:
-    platform: h2
+    platform: h2  #使用内嵌的h2数据库
+    url: jdbc:h2:mem:testdb
     schema: classpath:schema.sql
     data: classpath:data.sql
   application:
     name: service-provider-user
+  h2:
+    console:
+      enabled: true
+      path: /h2-console
 logging:
   level:
     root: INFO
