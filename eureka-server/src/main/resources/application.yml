@@ -13,7 +13,7 @@ eureka:
     #设为false，关闭自我保护
     enable-self-preservation: false
     #清理无效节点的时间间隔清理无效节点的时间间隔（单位毫秒，默认是60*1000）
-    eviction-interval-timer-in-ms: 5000
+    #eviction-interval-timer-in-ms: 5000
   client:
     #是否向服务注册中心注册自己
     registerWithEureka: false
