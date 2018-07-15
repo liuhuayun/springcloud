@@ -12,3 +12,16 @@ eureka:
   instance:
     prefer-ip-address: true
     instance-id: ${spring.application.name}:${spring.cloud.client.ip-address}:${server.port}
+    
+#1.使用配置的方式配置ribbon自定义负载均衡(优先级：配置文件>代码配置>默认配置)
+#service-provider-user: 
+#  ribbon: 
+#    NFLoadBalancerRuleClassName: com.netflix.loadbalancer.RandomRule
+
+#ribbon脱离eureka单独使用，ribbon不会获取euraka注册列表
+#ribbon:
+#  eureka:
+#   enabled: false  #禁用euraka
+#service-provider-user: #指定可用服务
+#  ribbon:
+#    listOfServers: localhost:7900 

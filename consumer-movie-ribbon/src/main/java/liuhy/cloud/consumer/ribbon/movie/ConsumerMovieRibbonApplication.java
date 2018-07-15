@@ -12,7 +12,7 @@ import org.springframework.web.client.RestTemplate;
 
 @SpringBootApplication
 @EnableEurekaClient
-@RibbonClient(name = "service-provider-user", configuration = TestConfiguration.class)
+@RibbonClient(name = "service-provider-user", configuration = TestConfiguration.class)//2.TestConfiguration代码方式负载均衡自定义配置
 @ComponentScan(excludeFilters = { @ComponentScan.Filter(type = FilterType.ANNOTATION, value = ExcludeFromComponentScan.class) })
 public class ConsumerMovieRibbonApplication {
 
