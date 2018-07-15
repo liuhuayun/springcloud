@@ -12,3 +12,14 @@ eureka:
   instance:
     prefer-ip-address: true
     instance-id: ${spring.application.name}:${spring.cloud.client.ip-address}:${server.port}
+logging:
+  level: 
+    liuhy.cloud.consumer.feign.movie.facade: DEBUG
+    
+# 解决第一次请求报超时异常的方案：
+hystrix.command.default.execution.isolation.thread.timeoutInMilliseconds: 5000
+# 或者：
+# hystrix.command.default.execution.timeout.enabled: false
+# 或者：
+#feign.hystrix.enabled: false ## 索性禁用feign的hystrix支持
+    
