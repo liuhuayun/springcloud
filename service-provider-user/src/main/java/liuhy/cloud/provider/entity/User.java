@@ -25,7 +25,12 @@ public User(Long id, String username) {
     this.id = id;
     this.username = username;
   }
-
+public User(Long id, String username, Short age) {
+    super();
+    this.id = id;
+    this.username = username;
+    this.age = age;
+  }
   public User() {
     super();
   }
@@ -85,4 +90,10 @@ public User(Long id, String username) {
   public void setBalance(BigDecimal balance) {
     this.balance = balance;
   }
+@Override
+public String toString() {
+	return "User [id=" + id + ", username=" + username + "]";
+}
+  
+  
 }

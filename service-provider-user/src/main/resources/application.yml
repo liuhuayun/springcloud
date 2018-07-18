@@ -30,6 +30,7 @@ eureka:
       enabled: true
     serviceUrl:
       defaultZone: http://admin:admin@localhost:8761/eureka
+    registry-fetch-interval-seconds: 30 #从eureka获取注册列表的时间间隔
   instance:
     prefer-ip-address: true
     instance-id: ${spring.application.name}:${spring.cloud.client.ip-address}:${server.port}
