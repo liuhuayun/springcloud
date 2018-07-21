@@ -7,6 +7,8 @@ spring:
       name: admin
       password: admin
 eureka:
+  environment: test
+  datacenter: cloud
   instance:
     hostname: localhost
   server:
