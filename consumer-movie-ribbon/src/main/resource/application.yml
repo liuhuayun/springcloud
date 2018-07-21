@@ -12,7 +12,8 @@ eureka:
   instance:
     prefer-ip-address: true
     instance-id: ${spring.application.name}:${spring.cloud.client.ip-address}:${server.port}
-    
+# 解决第一次请求报超时异常的方案：
+hystrix.command.default.execution.isolation.thread.timeoutInMilliseconds: 5000    
 #1.使用配置的方式配置ribbon自定义负载均衡(优先级：配置文件>代码配置>默认配置)
 #service-provider-user: 
 #  ribbon: 

@@ -15,3 +15,5 @@ eureka:
 feign:
   hystrix:
     enabled: true
+# 解决第一次请求报超时异常的方案：
+hystrix.command.default.execution.isolation.thread.timeoutInMilliseconds: 5000
