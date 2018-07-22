@@ -7,7 +7,7 @@ import feign.auth.BasicAuthRequestInterceptor;
 
 /**
  * 因为Eureka配置了用户名和密码，
- * 所有这个FeignClient也自己定义了FeignClientsConfiguration，也可以用来访问Eureka服务接口
+ * 所有这个FeignClient也自己定义了FeignClientsConfiguration，也可以用来访问Eureka服务接口,也可以在配置文件中路径配置用户名密码
  *
  */
 @Configuration
