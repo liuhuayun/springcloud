@@ -1,0 +1,16 @@
+server:
+  port: 8031
+spring:
+  application:
+    name: eureka-hystrix-turbine
+eureka: 
+  client:
+    serviceUrl:
+      defaultZone: http://admin:admin@localhost:8761/eureka
+  instance:
+    prefer-ip-address: true
+turbine:
+  aggregator:
+    clusterConfig: default #turbine需要聚合的集群名称 通过 http://localhost:8031/turbine.stream?cluster=default 访问 
+  appConfig: consumer-movie-ribbon-hystrix,consumer-movie-feign-hystrix #配置需要聚合的应用 
+  clusterNameExpression: metadata['cluster'] #获取集群名表达式，这里表示获取元数据中的cluster数据，在node01、node02为配置对应信息

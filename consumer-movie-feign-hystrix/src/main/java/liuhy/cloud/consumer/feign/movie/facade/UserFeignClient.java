@@ -7,8 +7,8 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
 
 import liuhy.cloud.consumer.feign.movie.entity.User;
-
-@FeignClient(name="service-provider-user",fallback = HystrixClientFallback.class)
+/*fallback和fallbackFactory只能用一个*/
+@FeignClient(name="service-provider-user",/*fallback = HystrixClientFallback.class,*/fallbackFactory=HystrixClientFactory.class)
 public interface UserFeignClient {
 	
   @RequestMapping(value = "/simple/{id}", method = RequestMethod.GET)

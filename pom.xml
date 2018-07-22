@@ -70,5 +70,6 @@
     <module>consumer-movie-feign</module>
     <module>consumer-movie-ribbon-hystrix</module>
     <module>consumer-movie-feign-hystrix</module>
+    <module>eureka-hystrix-turbine</module>
   </modules>
 </project>
