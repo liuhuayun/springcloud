@@ -1,0 +1,29 @@
+server:
+  servlet:
+    context-path: /
+  port: 8761
+spring:
+  security:
+    user:
+      name: admin
+      password: admin
+eureka:
+  environment: test
+  datacenter: cloud
+  instance:
+    hostname: localhost
+  server:
+    #设为false，关闭自我保护
+    enable-self-preservation: false
+    #清理无效节点的时间间隔清理无效节点的时间间隔（单位毫秒，默认是60*1000）
+    #eviction-interval-timer-in-ms: 5000
+  client:
+    #是否向服务注册中心注册自己
+    registerWithEureka: false
+    #是否检索服务
+    fetchRegistry: false
+    #服务注册中心的配置内容，指定服务注册中心的位置
+    serviceUrl:
+      defaultZone: http://admin:admin@${eureka.instance.hostname}:8762/eureka,http://admin:admin@${eureka.instance.hostname}:8763/eureka
+      
+      
