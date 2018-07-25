@@ -1,3 +1,7 @@
 spring:
+  application:
+    version: 2.0.3.RELEASE
+    formatted-version: v2.0.3.RELEASE
+    name: eureka-server-cluster
   profiles:
-    active: server3
+    active: server1

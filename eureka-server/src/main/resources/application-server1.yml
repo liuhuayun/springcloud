@@ -18,12 +18,13 @@ eureka:
     #清理无效节点的时间间隔清理无效节点的时间间隔（单位毫秒，默认是60*1000）
     #eviction-interval-timer-in-ms: 5000
   client:
-    #是否向服务注册中心注册自己
+    #是否向服务注册中心注册自己，单机时设置false，集群时设置true
     registerWithEureka: false
     #是否检索服务
     fetchRegistry: false
-    #服务注册中心的配置内容，指定服务注册中心的位置
+    #服务注册中心的配置内容，指定服务注册中心的位置，单机时设置false，集群时设置true
     serviceUrl:
-      defaultZone: http://admin:admin@${eureka.instance.hostname}:8762/eureka,http://admin:admin@${eureka.instance.hostname}:8763/eureka
+      defaultZone: http://admin:admin@localhost:8761/eureka
+      #defaultZone: http://admin:admin@server2:8762/eureka,http://admin:admin@server3:8763/eureka
       
       
