@@ -81,5 +81,6 @@
     <module>consumer-movie-ribbon-hystrix</module>
     <module>consumer-movie-feign-hystrix</module>
     <module>eureka-hystrix-turbine</module>
+    <module>admin-eureka</module>
   </modules>
 </project>
