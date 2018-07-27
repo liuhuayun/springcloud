@@ -18,6 +18,9 @@ logging:
     
 # 解决第一次请求报超时异常的方案：
 hystrix.command.default.execution.isolation.thread.timeoutInMilliseconds: 5000
+#management:
+#  server:
+#    port: 8080 # 自定义管理服务器端口
 # 或者：
 # hystrix.command.default.execution.timeout.enabled: false
 # 或者：
