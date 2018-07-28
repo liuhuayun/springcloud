@@ -1,36 +1,37 @@
 spring:
-  application: 
+  application:
     name: spring-boot-admin
-  profiles:
+  profiles: 
     active: secure
-server:
-  port: 8807
+server: 
+  port: 8788
+
 # tag::configuration-eureka[]
+
 eureka:   #<1>
   instance:
     leaseRenewalIntervalInSeconds: 10
-    health-check-url-path: /actuator/health #2.0后actuator的地址发生了变化
+    health-check-url-path: /health
   client:
     registryFetchIntervalSeconds: 5
     serviceUrl:
-      defaultZone: http://admin:admin@localhost:8761/eureka
+      defaultZone: http://localhost:8761/eureka/
+
 
 ---
 spring:
   profiles: insecure
 
 ---
-# admin登录的用户名和密码
-
 spring:
   profiles: secure
-security:
-  user:
+security: 
+  user: 
     name: admin
     password: admin
-# 注册给eureka的时候告诉eureka自己的密码
+    
 eureka:
   instance:
     metadata-map:
-      "user.name": user         #These two are needed so that the server
-      "user.password": password #can access the protected client endpoints
+      user.name: admin         #These two are needed so that the server
+      user.password: admin #can access the protected client endpoints
