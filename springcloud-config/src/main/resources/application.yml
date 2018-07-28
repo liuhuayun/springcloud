@@ -7,7 +7,7 @@ spring:
     config: 
       server:
         git:
-          uri: https://github.com/liuhuayun/springcloud/tree/master/springcloud-resources
+          uri: https://github.com/liuhuayun/springcloud.git
           username: 568656253@qq.com
           password: ABc568656253
           search-paths: '{application}'
