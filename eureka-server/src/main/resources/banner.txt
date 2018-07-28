@@ -10,5 +10,5 @@ ${AnsiColor.BRIGHT_GREEN}
       |_|                     |___/                                                                     
 
 ${AnsiColor.BRIGHT_RED}
-Application Version: ${application.version}${application.formatted-version}
+Application Version: ${spring.application.version}${spring.application.formatted-version}
 Spring Boot Version: ${spring-boot.version}${spring-boot.formatted-version}

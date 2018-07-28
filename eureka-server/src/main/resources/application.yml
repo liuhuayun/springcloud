@@ -10,7 +10,13 @@ management:
   endpoints:
     web:
       exposure:
-        include: "*"  #<2>
+        include: "*"
   endpoint:
     health:
       show-details: ALWAYS
+
+info:
+  app: 
+    name: "@project.name@"
+    description: "@project.description@"
+    version: "@project.version@"
