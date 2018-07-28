@@ -10,7 +10,7 @@ spring:
           uri: https://github.com/liuhuayun/springcloud.git
           username: 568656253@qq.com
           password: ABc568656253
-          search-paths: springcloud-resources/'{application}'  #配置仓库路径
+          search-paths: '{application}'  #配置仓库路径
           force-pull: true
           
 eureka:
