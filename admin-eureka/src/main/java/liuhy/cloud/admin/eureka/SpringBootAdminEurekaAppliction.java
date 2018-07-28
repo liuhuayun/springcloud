@@ -5,14 +5,8 @@ import org.springframework.boot.autoconfigure.EnableAutoConfiguration;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 import org.springframework.cloud.client.discovery.EnableDiscoveryClient;
 import org.springframework.context.annotation.Configuration;
-import org.springframework.context.annotation.Profile;
-import org.springframework.security.config.annotation.web.builders.HttpSecurity;
-import org.springframework.security.config.annotation.web.configuration.EnableWebSecurity;
-import org.springframework.security.config.annotation.web.configuration.WebSecurityConfigurerAdapter;
-import org.springframework.security.web.authentication.SavedRequestAwareAuthenticationSuccessHandler;
 
-import de.codecentric.boot.admin.server.config.AdminServerProperties;
-import de.codecentric.boot.admin.server.config.EnableAdminServer;
+import de.codecentric.boot.admin.config.EnableAdminServer;
 @Configuration
 @EnableAutoConfiguration
 @EnableDiscoveryClient //把 Spring Boot Admin 注册到 Eureka 里，这样 Spring Boot Admin 就可以发现注册到 Eureka 里的其他服务实例
@@ -24,7 +18,7 @@ public class SpringBootAdminEurekaAppliction {
 		SpringApplication.run(SpringBootAdminEurekaAppliction.class, args);
 	}
 	
-	 @Profile("insecure")
+/*	 @Profile("insecure")
 	 @Configuration
 	 @EnableWebSecurity
 	 public static class SecurityPermitAllConfig extends WebSecurityConfigurerAdapter {
@@ -63,5 +57,5 @@ public class SpringBootAdminEurekaAppliction {
                     .csrf().disable();
             // @formatter:on
         }
-    }
+    }*/
 }

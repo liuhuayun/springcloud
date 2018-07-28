@@ -2,8 +2,9 @@ spring:
   application: 
     name: spring-boot-admin
   profiles:
-    active:
-      - secure
+    active: secure
+server:
+  port: 8807
 # tag::configuration-eureka[]
 eureka:   #<1>
   instance:
@@ -14,31 +15,19 @@ eureka:   #<1>
     serviceUrl:
       defaultZone: http://admin:admin@localhost:8761/eureka
 
-# 2.0开始，actuator默认不开放，所以要设置为开放
-management:
-  endpoints:
-    web:
-      exposure:
-        include: "*"  #配置暴露了所有的端点
-  endpoint:
-    health:
-      show-details: ALWAYS
-server:
-  port: 8081
-# end::configuration-eureka[]
-
 ---
 spring:
   profiles: insecure
 
 ---
 # admin登录的用户名和密码
+
 spring:
   profiles: secure
-  security:
-    user:
-      name: user
-      password: password
+security:
+  user:
+    name: admin
+    password: admin
 # 注册给eureka的时候告诉eureka自己的密码
 eureka:
   instance:
