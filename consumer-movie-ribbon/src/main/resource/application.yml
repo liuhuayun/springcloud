@@ -26,3 +26,12 @@ hystrix.command.default.execution.isolation.thread.timeoutInMilliseconds: 5000
 #service-provider-user: #指定可用服务
 #  ribbon:
 #    listOfServers: localhost:7900 
+
+management:
+  endpoints:
+    web:
+      exposure:
+        include: '*'
+  endpoint:
+      health:
+        show-details: ALWAYS

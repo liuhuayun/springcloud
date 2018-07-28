@@ -13,7 +13,7 @@ management:
         include: "*"
   endpoint:
     health:
-      show-details: ALWAYS
+      show-details: ALWAYS  #暴露 Actuator 的所有端点的
 
 info:
   app: 

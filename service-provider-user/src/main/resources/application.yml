@@ -29,7 +29,7 @@ eureka:
     healthcheck:
       enabled: true
     serviceUrl:
-      defaultZone: http://admin:admin@localhost:8761/eureka
+      defaultZone: http://admin:admin@localhost:8761/eureka # eureka集群情况下，需要配置多个url逗号分隔向每个注册中心注册
     registry-fetch-interval-seconds: 30 #从eureka获取注册列表的时间间隔
   instance:
     prefer-ip-address: true

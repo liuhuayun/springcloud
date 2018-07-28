@@ -17,3 +17,12 @@ turbine:
   appConfig: consumer-movie-ribbon-hystrix,consumer-movie-feign-hystrix #配置需要聚合的应用,表明监控哪些服务
   clusterNameExpression: new String("default") #获取集群名El表达式，这里表示获取元数据中的cluster数据，在node01、node02为配置对应信息
 #turbine.instanceUrlSuffix.clusterConfigname: /ribbon/hystrix.stream #监控的集群节点首页是/ribbon 需要这么配置
+
+management:
+  endpoints:
+    web:
+      exposure:
+        include: '*'
+  endpoint:
+      health:
+        show-details: ALWAYS

@@ -15,7 +15,11 @@ eureka:
     metadata-map:
       cluster: main
 management:
+  endpoints:
+    web:
+      exposure:
+        include: '*'
   endpoint:
-    health:
-      show-details: ALWAYS
+      health:
+        show-details: ALWAYS
 hystrix.command.default.execution.isolation.thread.timeoutInMilliseconds: 5000

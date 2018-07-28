@@ -25,4 +25,12 @@ hystrix.command.default.execution.isolation.thread.timeoutInMilliseconds: 5000
 # hystrix.command.default.execution.timeout.enabled: false
 # 或者：
 #feign.hystrix.enabled: false ## 索性禁用feign的hystrix支持
-    
+
+management:
+  endpoints:
+    web:
+      exposure:
+        include: '*'
+  endpoint:
+      health:
+        show-details: ALWAYS
