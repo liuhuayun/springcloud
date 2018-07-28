@@ -7,4 +7,15 @@ spring:
     config: 
       server:
         git:
-          uri: 
+          uri: https://github.com/liuhuayun/springcloud/tree/master/springcloud-resources
+          username: 568656253@qq.com
+          password: ABc568656253
+          search-paths: '{application}'
+          
+eureka:
+  client:
+    healthcheck: 
+      enabled: true
+    serviceUrl:
+      defaultZone: http://admin:admin@localhost:8761/eureka # eureka集群情况下，需要配置多个url逗号分隔向每个注册中心注册
+          
