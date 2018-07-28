@@ -5,3 +5,12 @@ spring:
     name: eureka-server-cluster
   profiles:
     active: server1
+    
+management:
+  endpoints:
+    web:
+      exposure:
+        include: "*"  #<2>
+  endpoint:
+    health:
+      show-details: ALWAYS
