@@ -82,5 +82,8 @@
     <module>consumer-movie-feign-hystrix</module>
     <module>eureka-hystrix-turbine</module>
     <!-- <module>admin-eureka</module> -->
+    <module>springcloud-config</module>
+    <module>springcloud-config-client</module>
+    <module>springcloud-resources</module>
   </modules>
 </project>
