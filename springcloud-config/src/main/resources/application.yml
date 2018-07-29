@@ -1,5 +1,5 @@
 server:
-  port: 8888
+  port: 8988
 spring:
   application: 
     name: springcloud-config

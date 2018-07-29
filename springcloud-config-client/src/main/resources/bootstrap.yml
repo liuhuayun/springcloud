@@ -10,8 +10,10 @@ spring:
       discovery:
         enabled: true
         service-id: springcloud-config
-    
+        
 eureka:
   client:
     service-url: 
       defaultZone: http://admin:admin@localhost:8761/eureka # eureka集群情况下，需要配置多个url逗号分隔向每个注册中心注册
+
+#bootstrap.yml 先于 application.yml 加载
