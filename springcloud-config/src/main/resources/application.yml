@@ -12,6 +12,8 @@ spring:
           password: ABc568656253
           search-paths: '{application}'  #配置仓库路径
           force-pull: true
+          clone-on-start: true
+          default-label: master
           
 eureka:
   client:
