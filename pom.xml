@@ -84,5 +84,6 @@
     <!-- <module>admin-eureka</module> -->
     <module>springcloud-config</module>
     <module>springcloud-config-client</module>
+    <module>springcloud-stream</module>
   </modules>
 </project>
