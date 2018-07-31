@@ -4,6 +4,8 @@ import java.net.URI;
 import java.util.HashMap;
 import java.util.Map;
 
+import liuhy.cloud.consumer.ribbon.movie.entity.User;
+
 import org.codehaus.jettison.json.JSONException;
 import org.codehaus.jettison.json.JSONObject;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -17,8 +19,6 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 import org.springframework.web.client.RestTemplate;
 
-import liuhy.cloud.consumer.ribbon.movie.entity.User;
-
 @RestController("/restTamplate")
 public class RestTamplateController {
 	
@@ -27,7 +27,8 @@ public class RestTamplateController {
 	 
 	 private String url = "http://HELLO-SERVICE/hello";
 	 
-	 @RequestMapping("/getFor")
+	 @SuppressWarnings("unused")
+	@RequestMapping("/getFor")
 	 public String getFor() {
 		  Map<String, Object> map = new HashMap<>();
 	        map.put("name", "daye");
@@ -43,7 +44,8 @@ public class RestTamplateController {
 	     return forObject;
 	 }
 	 
-	 @RequestMapping("/postFor")
+	 @SuppressWarnings("unused")
+	@RequestMapping("/postFor")
 	 public String postFor() {
 		 User user = new User();
 		 user.setName("daye");

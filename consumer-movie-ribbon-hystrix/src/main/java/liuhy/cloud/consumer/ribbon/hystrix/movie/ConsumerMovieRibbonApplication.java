@@ -31,14 +31,14 @@ public class ConsumerMovieRibbonApplication {
    * @return
    */
 @Bean
-  public ServletRegistrationBean getServlet(){
+  public ServletRegistrationBean<HystrixMetricsStreamServlet> getServlet(){
 	/*
 	 * 访问http://localhost:8010//hystrix，输入框输入以下地址
 	 * http://localhost:8010/actuator/hystrix.stream
 	 * 
 	 */     
 	HystrixMetricsStreamServlet streamServlet = new HystrixMetricsStreamServlet();
-     ServletRegistrationBean registrationBean = new ServletRegistrationBean(streamServlet);
+     ServletRegistrationBean<HystrixMetricsStreamServlet> registrationBean = new ServletRegistrationBean<HystrixMetricsStreamServlet>(streamServlet);
      registrationBean.setLoadOnStartup(1);
      registrationBean.addUrlMappings("/actuator/hystrix.stream");
      registrationBean.setName("HystrixMetricsStreamServlet");

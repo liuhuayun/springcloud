@@ -1,20 +1,14 @@
 package liuhy.cloud.consumer.ribbon.movie.controller;
 
-import org.codehaus.jettison.json.JSONException;
-import org.codehaus.jettison.json.JSONObject;
+import liuhy.cloud.consumer.ribbon.movie.entity.User;
+
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.cloud.client.ServiceInstance;
 import org.springframework.cloud.client.loadbalancer.LoadBalancerClient;
-import org.springframework.http.HttpEntity;
-import org.springframework.http.HttpHeaders;
-import org.springframework.http.HttpMethod;
-import org.springframework.http.MediaType;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.RestController;
 import org.springframework.web.client.RestTemplate;
-
-import liuhy.cloud.consumer.ribbon.movie.entity.User;
 //ribbon客户端负载均衡，默认轮询的方式
 @RestController
 public class MovieController {

@@ -1,14 +1,13 @@
 package liuhy.springcloud.stream;
 
+import liuhy.springcloud.stream.message.StreamClient;
+
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 import org.springframework.messaging.support.MessageBuilder;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RestController;
-
-import liuhy.springcloud.stream.message.StreamClient;
-import liuhy.springcloud.stream.message.User;
 
 /**
  * Hello world!
@@ -29,7 +28,7 @@ public class SpringCloudStreamApplication {
 
     @GetMapping("send")
     public void send() {
-        User user = new User("张三", "154shmj");
+        //User user = new User("张三", "154shmj");
         streamClient.output().send(MessageBuilder.withPayload("Hello World...").build());
 //        streamClient.output().send(MessageBuilder.withPayload(user).build());
     }

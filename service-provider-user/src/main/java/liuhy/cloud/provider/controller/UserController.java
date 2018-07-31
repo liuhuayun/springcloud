@@ -1,7 +1,9 @@
 package liuhy.cloud.provider.controller;
 
-import java.util.ArrayList;
 import java.util.List;
+
+import liuhy.cloud.provider.entity.User;
+import liuhy.cloud.provider.repository.UserRepository;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.cloud.client.ServiceInstance;
@@ -12,12 +14,8 @@ import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RestController;
 
-import com.google.common.collect.Lists;
 import com.netflix.appinfo.InstanceInfo;
 import com.netflix.discovery.EurekaClient;
-
-import liuhy.cloud.provider.entity.User;
-import liuhy.cloud.provider.repository.UserRepository;
 
 @RestController
 public class UserController {
