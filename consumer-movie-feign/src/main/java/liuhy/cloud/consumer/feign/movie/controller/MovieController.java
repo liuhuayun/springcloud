@@ -13,7 +13,8 @@ import liuhy.cloud.consumer.feign.movie.facade.UserFeignClient2;
 @RestController
 public class MovieController {
 
-  @Autowired
+  @SuppressWarnings("unused")
+@Autowired
   private UserFeignClient userFeignClient;//默认的
   
   @Autowired
