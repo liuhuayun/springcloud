@@ -1,9 +1,15 @@
 package liuhy.springcloud.stream.message;
 
+import java.io.Serializable;
 
-public class User {
+public class User implements Serializable{
 
-    private String name;
+    /**
+	 * 
+	 */
+	private static final long serialVersionUID = -9109583800384599050L;
+
+	private String name;
 
     private String password;
 
@@ -38,4 +44,5 @@ public class User {
                 ", password='" + password + '\'' +
                 '}';
     }
+
 }
