@@ -4,6 +4,7 @@ import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.cloud.stream.annotation.EnableBinding;
 import org.springframework.cloud.stream.annotation.StreamListener;
+import org.springframework.messaging.handler.annotation.SendTo;
 import org.springframework.stereotype.Component;
 
 /**
@@ -17,9 +18,10 @@ public class StreamReceiver {
 	private static Logger logger = LoggerFactory.getLogger(StreamReceiver.class);
 	
     @StreamListener(StreamClient.INPUT) // "input" 通道监听,接受管道推送的消息
-    public void receive(Object message) {
+    //@SendTo(StreamClient.OUTPUT) // 返回处理结果到output通道
+    public String receive(Object message) {
 
-        logger.info("Received: " + message);
-
+        logger.info("input接收消息: " + message);
+        return "success";
     }
 }
