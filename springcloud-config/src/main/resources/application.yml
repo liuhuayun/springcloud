@@ -22,3 +22,8 @@ eureka:
     serviceUrl:
       defaultZone: http://admin:admin@localhost:8761/eureka # eureka集群情况下，需要配置多个url逗号分隔向每个注册中心注册
           
+management:
+  endpoints:
+    web:
+      exposure:
+        include: bus-refresh

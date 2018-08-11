@@ -1,0 +1,32 @@
+server:
+  port: 8999
+spring:
+  application:
+    name: springcloud-config-client
+  cloud:
+    bus:
+      trace:
+        enabled: true  #开启消息跟踪
+    config:
+      profile: dev
+      label: master
+      discovery:
+        enabled: true
+        service-id: springcloud-config
+  rabbitmq:
+    host: 127.0.0.1
+    port: 5672
+    username: guest
+    password: guest
+
+eureka:
+  client:
+    service-url: 
+      defaultZone: http://admin:admin@localhost:8761/eureka # eureka集群情况下，需要配置多个url逗号分隔向每个注册中心注册
+
+management:
+  endpoints:
+    web:
+      exposure:
+        include: bus-refresh
+#bootstrap.yml 先于 application.yml 加载

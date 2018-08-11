@@ -85,5 +85,6 @@
     <module>springcloud-config</module>
     <module>springcloud-config-client</module>
     <module>springcloud-stream</module>
+    <module>springcloud-config-client-bus</module>
   </modules>
 </project>
