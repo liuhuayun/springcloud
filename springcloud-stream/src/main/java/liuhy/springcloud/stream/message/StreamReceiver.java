@@ -18,7 +18,7 @@ public class StreamReceiver {
 	private static Logger logger = LoggerFactory.getLogger(StreamReceiver.class);
 	
     @StreamListener(StreamClient.INPUT) // "input" 通道监听,接受管道推送的消息
-    //@SendTo(StreamClient.OUTPUT) // 返回处理结果到output通道
+    @SendTo(StreamClient.OUTPUT) // 返回处理结果到output通道
     public String receive(Object message) {
 
         logger.info("input接收消息: " + message);

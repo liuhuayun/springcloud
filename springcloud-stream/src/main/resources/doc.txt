@@ -1,0 +1,16 @@
+#启动kafka 因为kafka的topic需要在zk注册中心注册
+kafka-server-start.bat ../../config/server1.properties
+# 创建一个名为“test”的主题，该主题有3个副本，1个分区
+kafka-topics.bat --create --zookeeper localhost:2181 --replication-factor 3 --partitions 1 --topic test
+#查看topic
+// 创建成功可以通过 list 列举所有的主题
+kafka-topics.bat --list --zookeeper localhost:2181
+// 查看test主题的信息
+kafka-topics.bat --describe --zookeeper localhost:2181 --topic test
+#发送和接受消息
+kafka-console-producer.bat --broker-list localhost:9092 --topic test 
+kafka-console-consumer.bat --bootstrap-server localhost:9092 --from-beginning --topic test
+#kafka集群：修改端口和日志目录
+kafka-server-start.bat ../../config/server1.properties
+kafka-server-start.bat ../../config/server2.properties
+kafka-server-start.bat ../../config/server3.properties
