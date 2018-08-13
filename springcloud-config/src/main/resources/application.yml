@@ -14,7 +14,12 @@ spring:
           force-pull: true
           clone-on-start: true
           default-label: master
-          
+#  rabbitmq:  #configserver承担配置刷新
+#    host: 127.0.0.1
+#    port: 5672
+#    username: guest
+#    password: guest
+
 eureka:
   client:
     healthcheck: 
